@@ -138,8 +138,8 @@ func newM2MModelInfo(m1, m2 *modelInfo) (info *modelInfo) {
 	f2.name = camelString(m2.table)
 	f1.fullName = info.fullName + "." + f1.name
 	f2.fullName = info.fullName + "." + f2.name
-	f1.column = inflection.Singularize(m1.table) + "_id"
-	f2.column = inflection.Singularize(m2.table) + "_id"
+	f1.column = inflection.Singular(m1.table) + "_id"
+	f2.column = inflection.Singular(m2.table) + "_id"
 	f1.rel = true
 	f2.rel = true
 	f1.relTable = m1.table
